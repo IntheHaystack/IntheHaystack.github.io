@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply for Access — Haystack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: #f9e6b6;
+      font-family: 'Outfit', 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: #3d2f0f;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 32px 16px;
+    }
+
+    .card {
+      width: min(460px, 100%);
+      background: #fdf4dc;
+      border: 1px solid #e3c87c;
+      border-radius: 10px;
+      padding: 40px 44px 36px;
+      box-shadow: 0 6px 24px rgba(122, 95, 34, 0.12);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      text-align: center;
+      color: #5a4416;
+      margin-bottom: 6px;
+    }
+
+    .sub {
+      text-align: center;
+      font-size: 0.95rem;
+      
+      color: #8c7340;
+      margin-bottom: 30px;
+    }
+
+    .field { margin-bottom: 18px; }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #5a4416;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      background: #fffbf0;
+      border: 1px solid #d9bf7a;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-family: 'Outfit', 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      color: #3d2f0f;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus {
+      border-color: #b8923a;
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.25);
+    }
+
+    .row { display: flex; gap: 16px; }
+    .row .field { flex: 1; }
+
+    button {
+      display: block;
+      width: 100%;
+      margin-top: 26px;
+      background: #c9a84c;
+      border: 1px solid #b8923a;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: 'Outfit', 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2e2308;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover { background: #d8b85a; }
+
+    .back {
+      display: block;
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.9rem;
+      
+      color: #8c7340;
+      text-decoration: none;
+    }
+
+    .back:hover { color: #5a4416; text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .card { padding: 30px 24px 28px; }
+      .row { flex-direction: column; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+  <form class="card" action="https://formspree.io/f/mjyggyby" method="POST">
+    <h1>Apply for Access</h1>
+    <p class="sub">Tell us a little about yourself and we'll be in touch.</p>
+
+    <div class="row">
+      <div class="field">
+        <label for="first">First Name</label>
+        <input id="first" name="first_name" type="text" autocomplete="given-name" required />
+      </div>
+      <div class="field">
+        <label for="last">Last Name</label>
+        <input id="last" name="last_name" type="text" autocomplete="family-name" required />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required />
+    </div>
+
+    <div class="field">
+      <label for="title">Title</label>
+      <input id="title" name="title" type="text" autocomplete="organization-title" />
+    </div>
+
+    <div class="field">
+      <label for="org">Organization</label>
+      <input id="org" name="organization" type="text" autocomplete="organization" />
+    </div>
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <a class="back" href="/">&larr; Back to Haystack</a>
+</body>
+</html>
